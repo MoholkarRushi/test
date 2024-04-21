@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noble Hospital</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .enquiry-form {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .enquiry-form label,
+        .enquiry-form input,
+        .enquiry-form textarea,
+        .enquiry-form button {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .enquiry-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .enquiry-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .enquiry-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Noble Hospital</h1>
+
+    <!-- Hospital Appointment Section -->
+    <div class="section">
+        <h2>Hospital Appointment</h2>
+        <p>Schedule an appointment with our healthcare professionals.</p>
+        <img src="https://t4.ftcdn.net/jpg/03/30/33/29/360_F_330332917_MO0x1tcYedbGxUM4wgATwyOkU7xY5wEI.jpg" alt="Hospital Appointment">
+        <a href="#" class="button">Book Appointment</a>
+    </div>
+
+    <!-- Health Packages Section -->
+    <div class="section">
+        <h2>Book Health Packages</h2>
+        <p>Explore and book health packages tailored to your needs.</p>
+        <img src="https://t4.ftcdn.net/jpg/01/59/16/99/360_F_159169902_j2pJzSBZ7LZQkqpT6753ABxxtrevwt8V.jpg" alt="Health Packages">
+        <a href="#" class="button">Browse Packages</a>
+    </div>
+
+    <!-- Connect on WhatsApp Section -->
+    <div class="section">
+        <h2>Connect on WhatsApp</h2>
+        <p>Have questions or need assistance? Connect with us on WhatsApp.</p>
+        <img src="https://img.freepik.com/premium-vector/whatsapp-icon-concept_23-2147897840.jpg" alt="WhatsApp">
+        <a href="https://wa.me/yourphonenumber" target="_blank" class="button">Chat on WhatsApp</a>
+    </div>
+
+   
+
+    <!-- Enquiry Section -->
+    <div class="section">
+        <h2>Enquiry</h2>
+        <p>Submit your inquiry, and we'll get back to you.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnu28BY-ZLJPJzSCvmVd5HNl-rDLevM_X8sJADnEgMBkxEgSKI6b6x3089mg2GMzFhK24&usqp=CAU" alt="Enquiry">
+        <a href="#" class="button" onclick="toggleEnquiryForm()">Submit Inquiry</a>
+
+        <form id="enquiryForm" class="enquiry-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="submitEnquiry()">Submit</button>
+        </form>
+    </div>
+    <button class="button" onclick="logout()">Logout</button>
+
+    <script>
+        function toggleEnquiryForm() {
+            var enquiryForm = document.getElementById('enquiryForm');
+            enquiryForm.style.display = (enquiryForm.style.display === 'none' || enquiryForm.style.display === '') ? 'block' : 'none';
+        }
+
+        function logout() {
+            // Redirect to index3.html
+            window.location.href = "tp.html";
+        }
+
+        function submitEnquiry() {
+            // Add your logic to handle the inquiry form submission
+            alert('Inquiry submitted! We will get back to you shortly.');
+            // You can also send the data to the server using AJAX for further processing.
+        }
+    </script>
+</body>
+</html>

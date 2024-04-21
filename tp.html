@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            background-image: url('https://wallpapertag.com/wallpaper/full/e/1/4/826909-hospital-wallpapers-1920x1080-hd.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: #ff0000;
+            margin-top: 5px;
+        }
+
+        .input-error {
+            border: 1px solid #ff0000;
+        }
+    #login-box {
+        width: 300px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+    #login-box h2 {
+        margin-top: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+    #login-box input[type="text"],
+    #login-box input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    #login-box button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="login-box">
+    <h2>Sign In</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="validateLogin()">Login</button>
+</div>
+
+<script>
+    let attempts = 0;
+
+    function validateLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Here, you should replace 'your_username' and 'your_password' with your actual credentials
+        if (((username === 'admin') || (username==='rushi')) && (password === 'admin@123') || (password === 'rushi@123') ) {
+            alert('Login successful!');
+            window.location.href = "index2.html";
+            // Redirect to another page or do further actions upon successful login
+        } else {
+            attempts++;
+            if (attempts >= 3) {
+                alert('Please attempt again after 2 hours.');
+                setTimeout(function () {
+                    window.close();
+                }, 2000); // Close the window after 2 seconds
+            } else {
+                alert('Invalid credentials. Attempts left: ' + (3 - attempts));
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

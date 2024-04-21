@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noble Hospital</title>
+<style>
+/* Common CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/030/258/039/non_2x/beautiful-nature-wallpaper-hd-wallpaper-ai-generated-free-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center-align the content */
+}
+
+.title {
+    font-size: 40px; /* Increased font size */
+    margin-top: 50px; /* Add space between title and buttons */
+    font-weight: bold; /* Make the title bold */
+    font-style: italic; /* Apply italic style */
+    font-family: "Times New Roman", Times, serif; /* Change font family */
+}
+
+.options {
+    margin-top: 20px; /* Add space between title and buttons */
+}
+
+.button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.bold-text {
+    font-size: 20px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    font-style: italic; /* Apply italic style */
+    font-family: "Times New Roman", Times, serif; /* Change font family */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">WELCOME TO NOBLE HOSPITAL</h1>
+    <div class="options">
+        <p class="bold-text">Please choose an option:</p>
+
+        <!-- Sign In Button -->
+        <button class="button" onclick="redirectToSignIn()">Sign In</button>
+
+        <!-- Login Button -->
+        <button class="button" onclick="redirectToLogin()">Login</button>
+    </div>
+</div>
+
+<script>
+function redirectToSignIn() {
+    window.location.href = "tp.html"; // Redirect to tp.html
+}
+
+function redirectToLogin() {
+    window.location.href = "login.html"; // Redirect to login.html
+}
+</script>
+
+</body>
+</html>
